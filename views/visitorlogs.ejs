@@ -1,0 +1,35 @@
+<% include ./partials/header.ejs %>
+<center>
+
+<h1>Displaying visit logs..</h1>
+<br>
+
+ <table style="width:100%">
+  <tr>
+    <th>Visitor Name</th>
+    <th>Employee Name</th>
+    <th>Employee ID</th>
+    <th>Department</th>
+    <th>Time of Entry</th>
+    <th>Duration of Visit</th>
+    <th>Purpose</th>
+  </tr>
+<% for (i = 0; i < allUsers.length; i++) { %>
+    <tr>
+    <td><%= allUsers[i].visitorName %></td>
+    <td><%= allUsers[i].empName %></td>
+    <td><%= allUsers[i].empID %></td>
+    <td><%= allUsers[i].dept %></td>
+    <td><%= allUsers[i].time.toUTCString()%> </td>
+    <td><%= allUsers[i].duration %></td>
+    <td><%= allUsers[i].purpose %></td>
+
+  </tr>
+
+<%}%>
+
+
+  </table>
+  </center>
+
+<% include ./partials/footer.ejs %>

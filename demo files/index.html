@@ -1,0 +1,81 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<div class="container">
+  <div class="jumbotron">
+    <marquee>
+    <h1 class="display-4"> Blogger Base</h1>
+    </marquee>
+  </div>
+</div>
+<center>
+<section class="insert">
+    <h3>Insert Data</h3>
+    <form method="post" action="/foods">
+        <div class="input">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="input">
+            <label for="img">image URL</label>
+            <input type="text" id="img" name="img">
+        </div>
+        <div class="input">
+            <label for="recipe">Recipe</label>
+            <input type="text" id="recipe" name="recipe">
+        </div>
+        <button type="submit">INSERT</button>
+    </form>
+<!-- </section>
+ <section class="get">
+    <h3>Get Data</h3>
+    <a href="/get-data">LOAD DATA</a>
+    <div>
+        {{# each item }}
+            <article class="item">
+                <div>Title: {{ this.title }}</div>
+                <div>Content: {{ this.content }}</div>
+                <div>Author: {{ this.author }}</div>
+                <div>ID: {{ this._id }}</div>
+            </article>
+        {{/each}}
+    </div>
+</section> -->
+
+
+<a href ="index2.html">Click here to update</a>
+
+ <!-- <section class="update">
+    <h3>Update Data</h3>
+    <form action="/update/:foodID" method="post">
+        <div class="input">
+            <label for="foodID">ID</label>
+            <input type="text" id="foodID" name="foodID">
+        </div>
+        <div class="input">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="input">
+            <label for="img">Image URL</label>
+            <input type="text" id="img" name="img">
+        </div>
+        <div class="input">
+            <label for="recipe">Recipe</label>
+            <input type="text" id="recipe" name="recipe">
+        </div>
+        <button type="submit">UPDATE</button>
+    </form>
+</section>  -->
+
+<section class="delete">
+    <h3>Delete Data</h3>
+    <form action="/delete" method="post">
+        <div class="input">
+            <label for="foodID">ID</label>
+            <input type="text" id="foodID" name="foodID">
+        </div>
+        <button type="submit">DELETE</button>
+    </form>
+</section>
+</center>
+</html>

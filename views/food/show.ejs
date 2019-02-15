@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>At a Glance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/register">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container text-center mb-5">
+
+        <div class="" style="display:inline-block; width:80%">
+          <img src="<%= foundFood.img %>" class="img-thumbnail">
+          <center><p class="caption"><%= foundFood.name %></p></center>
+          <p class="caption"><%= foundFood.recipe %></p>
+          <div class="text-center">
+            <a name="editFood" class="btn btn-sm btn-primary" href="/foods/<%= foundFood._id %>/edit" method = "GET">Edit</a>
+            <form class="" action="/foods/<%= foundFood._id %>?_method=delete" method="post" style="display:inline-block">
+                <input type="submit" name="sub-btn" value="Delete" class="btn btn-sm btn-danger">
+            </form>
+          </div>
+        </div>
+
+
+        <div class="text-center mt-2">
+            <a href="/foods/<%=foundFood._id%>/comments" class="btn btn-info btn-lg">Add Comments</a>
+        </div>
+        <% for(i=0;i< foundFood.commentList.length ; i++){ %>
+          <div class="text-left">
+            <p class=""><strong><em>Comment <%=(i+1)%> :</em></strong> <%=foundFood.commentList[i].text %></p>
+            <div class="text-right">
+              <a href="/foods/<%=foundFood._id%>/comments/<%=foundFood.commentList[i]._id%>/edit" class="btn btn-sm btn-warning">Edit</a>
+              <form action="/foods/<%=foundFood._id%>/comments/<%=foundFood.commentList[i]._id%>?_method=delete" method="post" style="display:inline-block">
+                <input type="submit" name="del-btn" value="Delete" class="btn btn-sm btn-danger">
+              </form>
+            </div>
+          </div>
+        <% } %>
+        <!-- display all comments -->
+        <div class="mt-2">
+
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>

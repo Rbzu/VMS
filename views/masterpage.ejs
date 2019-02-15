@@ -1,0 +1,30 @@
+<% include ./partials/header.ejs %>
+
+    <!-- BODY DIV AND SPANS -->
+    <div class="container mt-3">
+    	<div class="jumbotron">
+    	  <h1 class="display-4">User Base</h1>
+    	  <p class="lead">Welcome to your VMS dashboard!</p>
+    	  <hr class="my-4">
+    	  <p>An easy and effective way to manage users,administrators and visitor logs in a secure and organized environment.</p>
+    	  <!-- <p class="lead">
+    	    <a class="btn btn-primary btn-lg" href="/register" role="button">register</a>
+        </p> -->
+    	</div>
+
+<% if(loggedInUser){ %>
+
+  <div class="container">
+<h3>Active Users :</h3>
+<a href="/secret" class="btn btn-lg btn-warning"><%=loggedInUser.username%></a>
+
+  </div>
+
+
+<% } %>
+
+
+
+    </div>
+
+<% include ./partials/footer.ejs %>

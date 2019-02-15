@@ -1,0 +1,120 @@
+<HTML>
+  <HEAD>
+    <TITLE>Enter Your Data!</TITLE>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!--new addn here  -->
+    <style>
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 360px;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+    h1 { color: #DDA0DD	; font-family: 'Helvetica Neue', sans-serif; font-size: 100px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+    /* body{background:url(img5.jpg);}
+ form{background:url(img5.jpg);} */
+    </style>
+<!--new addn here ends  -->
+  </HEAD>
+
+  <BODY >
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-20 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!-- MAIN BODY -->
+<H1>Enter Your Data!</H1>
+
+<div class="container">
+  <FORM NAME="form1" ACTION="jsp1.jsp" METHOD="POST">
+  Enter your name : <br> <INPUT TYPE="TEXT" NAME="text"><br>
+    Enter your occupation : <br> <INPUT TYPE="TEXT" NAME="text"><br>
+      Enter your sex :  <br> <INPUT TYPE="TEXT" NAME="text"><br>
+    <INPUT TYPE="SUBMIT" VALUE="Submit!">
+  </FORM>
+
+</div>
+
+</center>
+<!--new addn  -->
+<div class="gallery">
+  <a target="_blank" href="img1.jpg">
+    <img src="img1.jpg" alt="Cinque Terre" width="600" height="500">
+  </a>
+  <div class="desc">Aesthetic City</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img2.jpg">
+    <img src="img2.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <br>
+  <div class="desc">Aesthetic Gesture</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img3.jpg">
+    <img src="img3.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Aesthetic Landscape</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img4.jpg">
+    <img src="img4.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Aesthetic Gesture(1)</div>
+</div>
+<!--new addn ends  -->
+</BODY>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</HTML>

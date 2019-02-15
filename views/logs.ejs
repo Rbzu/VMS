@@ -1,0 +1,42 @@
+<% include ./partials/header.ejs %>
+<center>
+
+<h1>Displaying user logs..</h1>
+<br>
+
+ <table style="width:100%">
+  <tr>
+    <th>User Name</th>
+    <th>Phone Number</th>
+    <th></th>
+  </tr>
+<% for (i = 0; i < allUsers.length; i++) { %>
+    <tr>
+    <td><%= allUsers[i].username %></td>
+    <td><%= allUsers[i].phonenumber %></td>
+    <td>
+      <%if(!allUsers[i].isadmin){%>
+      <%if(loggedInUser.isadmin)      {%>
+                                    <form class="" action="/secret/logs/<%= allUsers[i]._id %>?_method=delete" method="post" style="display:inline-block">
+                                      <input type="submit" name="sub-btn" value="Delete Account" class="btn btn-sm btn-danger">
+                                    </form>
+                        <%            }
+      else if(loggedInUser.islocal){ if(!allUsers[i].isadmin && !allUsers[i].islocal)
+                                    {%>
+                                    <form class="" action="/secret/logs/<%= allUsers[i]._id %>?_method=delete" method="post" style="display:inline-block">
+                                      <input type="submit" name="sub-btn" value="Delete Account" class="btn btn-sm btn-danger">
+                                    </form>
+                                <%}} }%>
+
+
+
+  </td>
+  </tr>
+
+<%}%>
+
+
+  </table>
+  </center>
+
+<% include ./partials/footer.ejs %>

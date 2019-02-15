@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food Blog</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BODY DIV AND SPANS -->
+<div class="container mt-3">
+	<div class="jumbotron">
+	  <h1 class="display-4">Blogger Base</h1>
+	  <p class="lead">Welcome to Food Planet!</p>
+	  <hr class="my-4">
+	  <p>Let's eat!</p>
+	  <p class="lead">
+	    <a class="btn btn-primary btn-lg" href="/foods/new" role="button">Add more..</a>
+	  </p>
+	</div>
+</div>
+
+<div class="container mb-5">
+  <% for(i=0;i< foundFoodList.length ; i++){ %>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="display:inline-block; width:24.5%">
+      <img src="<%= foundFoodList[i].img %>" class="img-thumbnail">
+      <p class="caption"><%=foundFoodList[i].name%></p>
+      <div class="text-center">
+        <a name="displayFoodInfo" class="btn btn-sm btn-primary" href="/foods/<%=foundFoodList[i]._id%>">Show More</a>
+      </div>
+    </div>
+  <% } %>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
